@@ -2,6 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c33871-9f90-4786-bf82-5a01b87bb316" name="Default Changelist" comment="提交">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/DelayTaskServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/src/main/java/com/RunServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/src/main/java/com/config/RedisListenerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/src/main/java/com/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/src/main/resources/logging-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DelayTaskServer/src/test/java/com/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/delayTaskCommon.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/IAddDelayedTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/annotation/DelayTaskType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/ThreadPoolCommon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/enums/BusinessTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/gateWay/RedisDelayTaskGateWay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/AddLoopPullDelayedTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/LoopPullDelayedTaskListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/AddMonitorDelayedTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/MonitorDelayedTaskListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/service/OpenAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/service/PushRiskSystemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/IDelayedTaskLisenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/allBusinessListeners/OpenAccountListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -10,6 +36,8 @@
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/DelayTaskServer/target/" />
+    <ignored path="$PROJECT_DIR$/delayTaskCommon/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,16 +50,126 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/main/java/com/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+            <state relative-caret-position="65">
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/gateWay/RedisDelayTaskGateWay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/annotation/DelayTaskType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/MonitorDelayedTaskListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/AddLoopPullDelayedTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/AddMonitorDelayedTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/LoopPullDelayedTaskListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/IDelayedTaskLisenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="76" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/allBusinessListeners/OpenAccountListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/ThreadPoolCommon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BoundZSetOperations</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,7 +177,37 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/RunServer.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/AddRedisDelayedTask.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/IAddDelayedTask.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/passiveMonitor/AddRedisDelayedTask.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/passiveMonitor/AddMonitorDelayedTask.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/passiveMonitor/OpenAccountDelayedTaskListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/passiveMonitor/RedisKeyExpirationListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/test/java/com/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java" />
+        <option value="$PROJECT_DIR$/DelayTaskServer/src/test/java/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java" />
+        <option value="$PROJECT_DIR$/DelayTaskServer/pom.xml" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/passiveMonitor/MonitorDelayedTaskListener.java" />
+        <option value="$PROJECT_DIR$/DelayTaskServer/src/main/java/com/config/RedisListenerConfig.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/loopPull/AddLoopPullDelayedTask.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/annotation/DelayTaskType.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/taskListeners/OpenAccountListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListeners/taskListeners/OpenAccountListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListeners/OpenAccountListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/OpenAccountListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/AddMonitorDelayedTask.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/annotation/DelayTaskType.java" />
+        <option value="$PROJECT_DIR$/DelayTaskServer/src/test/java/com/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/enums/BusinessTypeEnum.java" />
+        <option value="$PROJECT_DIR$/DelayTaskServer/src/main/java/com/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/AddLoopPullDelayedTask.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/ThreadPoolCommon.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/IDelayedTaskLisenter.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/MonitorDelayedTaskListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/gateWay/RedisDelayTaskGateWay.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/LoopPullDelayedTaskListener.java" />
+        <option value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/allBusinessListeners/OpenAccountListener.java" />
       </list>
     </option>
   </component>
@@ -50,14 +218,6 @@
         <option name="mavenHome" value="D:/mySoft/apache-maven-3.6.0" />
         <option name="userSettingsFile" value="D:\mySoft\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -84,6 +244,82 @@
             <path>
               <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
               <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="loopPull" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="passiveMonitor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="taskListener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="delayTaskCommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="taskListener" type="462c0819:PsiDirectoryNode" />
+              <item name="allBusinessListeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedDelayTaskRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedDelayTaskRedis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -93,13 +329,31 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/mySoft/nodeJS/node.exe" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="distributedDelayTaskRedis" />
+      <recent name="com" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGitChat\DistributedDelayTaskRedis\delayTaskCommon\src\main\java\com\common" />
+      <recent name="D:\MyGitChat\DistributedDelayTaskRedis\delayTaskCommon\src\main\java\com\gateWay" />
+      <recent name="D:\MyGitChat\DistributedDelayTaskRedis\DelayTaskServer\src\main\resources" />
+      <recent name="D:\MyGitChat\DistributedDelayTaskRedis\src\main\java\com" />
+      <recent name="D:\MyGitChat\DistributedDelayTaskRedis\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -113,6 +367,88 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Spring Boot.RunServer (1)">
+    <configuration name="AddLoopPullDelayedTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.loopPull.AddLoopPullDelayedTask" />
+      <module name="delayTaskCommon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loopPull.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoopPullDelayedTaskListener" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.loopPull.LoopPullDelayedTaskListener" />
+      <module name="delayTaskCommon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loopPull.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDistributedDelayTaskRedis.addLoopPullDelayedTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DelayTaskServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.distributedDelayTaskRedis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.distributedDelayTaskRedis" />
+      <option name="MAIN_CLASS_NAME" value="com.distributedDelayTaskRedis.TestDistributedDelayTaskRedis" />
+      <option name="METHOD_NAME" value="addLoopPullDelayedTask" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDistributedDelayTaskRedis.removeZSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DelayTaskServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.distributedDelayTaskRedis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.distributedDelayTaskRedis" />
+      <option name="MAIN_CLASS_NAME" value="com.distributedDelayTaskRedis.TestDistributedDelayTaskRedis" />
+      <option name="METHOD_NAME" value="removeZSet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunServer (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="DelayTaskServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.RunServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.RunServer (1)" />
+        <item itemvalue="Application.LoopPullDelayedTaskListener" />
+        <item itemvalue="JUnit.TestDistributedDelayTaskRedis.removeZSet" />
+        <item itemvalue="JUnit.TestDistributedDelayTaskRedis.addLoopPullDelayedTask" />
+        <item itemvalue="Application.AddLoopPullDelayedTask" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -123,7 +459,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585190961986</updated>
-      <workItem from="1585190964872" duration="936000" />
+      <workItem from="1585190964872" duration="37850000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1585190992915</created>
@@ -146,46 +482,126 @@
       <option name="project" value="LOCAL" />
       <updated>1585191448313</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="提交">
+      <created>1585191953288</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585191953289</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestDistributedDelayTaskRedis_removeZSet - 2020.03.26 at 18h 53m 30s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.removeZSet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_addLoopPullDelayedTask - 2020.03.26 at 18h 54m 59s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.addLoopPullDelayedTask" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_removeZSet - 2020.03.26 at 18h 55m 29s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.removeZSet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_removeZSet - 2020.03.26 at 18h 55m 49s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.removeZSet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_addKey - 2020.03.26 at 18h 57m 25s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.addKey" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_addLoopPullDelayedTask - 2020.03.26 at 18h 58m 04s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.addLoopPullDelayedTask" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_removeZSet - 2020.03.26 at 18h 58m 45s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.removeZSet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_addLoopPullDelayedTask - 2020.03.26 at 19h 03m 14s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.addLoopPullDelayedTask" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_removeZSet - 2020.03.26 at 19h 03m 37s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.removeZSet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDistributedDelayTaskRedis_removeZSet - 2020.03.26 at 19h 04m 01s.xml">
+      <configuration name="TestDistributedDelayTaskRedis.removeZSet" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="936000" />
+    <option name="totallyTimeSpent" value="37850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30294907" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="aiXcoder" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info id="Designer" order="5" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.30294907" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.39943343" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="aiXcoder" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Bean Validation" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info id="Designer" order="5" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.30294907" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.39943343" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="aiXcoder" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Bean Validation" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -194,14 +610,411 @@
     <MESSAGE value="提交" />
     <option name="LAST_COMMIT_MESSAGE" value="提交" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DelayTaskServer/src/test/java/com/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DelayTaskServer/src/test/java/com/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/LoopPullDelayedTaskListener.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DelayTaskServer/src/main/java/com/controller/TestController.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/AddMonitorDelayedTask.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/MonitorDelayedTaskListener.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/AddLoopPullDelayedTask.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/AddLoopPullDelayedTask.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>t.getState()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/DistributedDelayTaskRedis.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RunServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/main/resources/logging-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/passiveMonitor/OpenAccountDelayedTaskListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.0.RELEASE/spring-data-redis-2.2.0.RELEASE-sources.jar!/org/springframework/data/redis/listener/RedisMessageListenerContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/2.2.0.RELEASE/spring-boot-test-2.2.0.RELEASE-sources.jar!/org/springframework/boot/test/context/SpringBootTestContextBootstrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/test/java/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        <state relative-caret-position="198">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.0.RELEASE/spring-data-redis-2.2.0.RELEASE-sources.jar!/org/springframework/data/redis/listener/KeyExpirationEventMessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/main/java/com/config/RedisListenerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/service/PushRiskSystemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/service/OpenAccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/time/LocalDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1520">
+          <caret line="133" column="3" lean-forward="true" selection-start-line="133" selection-start-column="3" selection-end-line="133" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/TimeUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1988">
+          <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1161">
+          <caret line="446" column="11" selection-start-line="446" selection-start-column="11" selection-end-line="446" selection-end-column="11" />
+          <folding>
+            <element signature="e#15020#15021#0" expanded="true" />
+            <element signature="e#15084#15085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.0.RELEASE/spring-data-redis-2.2.0.RELEASE-sources.jar!/org/springframework/data/redis/core/ZSetOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.0.RELEASE/spring-beans-5.2.0.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="417" column="30" lean-forward="true" selection-start-line="417" selection-start-column="30" selection-end-line="417" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.0.RELEASE/spring-beans-5.2.0.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/InitDestroyAnnotationBeanPostProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="385" lean-forward="true" selection-start-line="385" selection-end-line="385" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.0.RELEASE/spring-data-redis-2.2.0.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="1341" column="37" selection-start-line="1341" selection-start-column="37" selection-end-line="1341" selection-end-column="37" />
+          <folding>
+            <element signature="e#41483#41484#0" expanded="true" />
+            <element signature="e#41540#41541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.0.RELEASE/spring-data-redis-2.2.0.RELEASE-sources.jar!/org/springframework/data/redis/core/DefaultBoundZSetOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="163" column="7" lean-forward="true" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
+          <folding>
+            <element signature="e#5022#5023#0" expanded="true" />
+            <element signature="e#5077#5078#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding>
+            <element signature="e#1464#1658#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/test/java/com/distributedDelayTaskRedis/TestDistributedDelayTaskRedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/main/java/com/RunServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.0.RELEASE/spring-data-redis-2.2.0.RELEASE-sources.jar!/org/springframework/data/redis/core/BoundZSetOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="136" column="9" lean-forward="true" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/IAddDelayedTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DelayTaskServer/src/main/java/com/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/enums/BusinessTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/annotation/DelayTaskType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/AbstractExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="150" column="6" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/common/ThreadPoolCommon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/AddMonitorDelayedTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/passiveMonitor/MonitorDelayedTaskListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/IDelayedTaskLisenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="76" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/AddLoopPullDelayedTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/gateWay/RedisDelayTaskGateWay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/loopPull/LoopPullDelayedTaskListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delayTaskCommon/src/main/java/com/taskListener/allBusinessListeners/OpenAccountListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
         </state>
       </provider>
     </entry>
