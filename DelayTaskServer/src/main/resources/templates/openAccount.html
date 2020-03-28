@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <script>
+
+     function openAccount(type){
+         window.location.href="http://127.0.0.1:8080/test/toJumpOpenAccountH5?type="+type;
+     }
+
+ </script>
+</head>
+<body>
+<input type="button" value="开户(monitor)" onclick="openAccount('monitor')"><br>
+<input type="button" value="开户(loopPull)" onclick="openAccount('loopPull')">
+</body>
+</html>

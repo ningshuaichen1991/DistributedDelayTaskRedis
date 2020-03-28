@@ -1,26 +1,29 @@
 package com.gateWay;
 
 import com.annotation.DelayTaskType;
-import com.taskListener.IDelayedTaskLisenter;
+import com.taskBusiness.IDelayedTaskBusiness;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * 根据topic路由具体的业务监听类
+ */
 @Component
 @Slf4j
-public class RedisDelayTaskGateWay{
+public class DelayTaskBusinessGateWay {
 
     @Autowired
-    private List<IDelayedTaskLisenter> delayedTaskLisenterList;
+    private List<IDelayedTaskBusiness> delayedTaskLisenterList;
 
 
-    public IDelayedTaskLisenter getDelayedTaskLisenter(String topic){
-        for(IDelayedTaskLisenter service : delayedTaskLisenterList){
+    public IDelayedTaskBusiness getDelayedTaskLisenter(String topic){
+        for(IDelayedTaskBusiness service : delayedTaskLisenterList){
             DelayTaskType delayTaskType = service.getClass().getAnnotation(DelayTaskType.class);
             if(delayTaskType.topic().getBusinessValue().equals(topic)){
-                log.info("已导航到具体的延时任务监听器类，{}",service.getClass().getSimpleName());
+                log.info("已导航到具体的延时任务业务类，{}",service.getClass().getSimpleName());
                 return service;
             }
         }

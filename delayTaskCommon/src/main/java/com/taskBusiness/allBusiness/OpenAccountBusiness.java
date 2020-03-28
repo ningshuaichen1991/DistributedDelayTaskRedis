@@ -1,9 +1,9 @@
-package com.taskListener.allBusinessListeners;
+package com.taskBusiness.allBusiness;
 
-import com.IAddDelayedTask;
+import com.IDelayedTask;
 import com.annotation.DelayTaskType;
 import com.enums.BusinessTypeEnum;
-import com.taskListener.IDelayedTaskLisenter;
+import com.taskBusiness.IDelayedTaskBusiness;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +15,10 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Service
 @DelayTaskType(topic= BusinessTypeEnum.opendAccount,topicDesc = "开户任务")
-public class OpenAccountListener implements IDelayedTaskLisenter {
+public class OpenAccountBusiness implements IDelayedTaskBusiness {
 
     @Override
-    public boolean execute(String topic, String key,IAddDelayedTask addDelayedTask) {
+    public boolean execute(String topic, String key, IDelayedTask addDelayedTask) {
       log.info("延时任务开始执行，topic：{} ，key ：{}",topic,key);
       try {
           Thread.sleep(500);

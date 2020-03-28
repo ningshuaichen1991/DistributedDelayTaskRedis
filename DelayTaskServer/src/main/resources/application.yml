@@ -19,3 +19,9 @@ spring:
   cache:
     redis:
       time-to-live: -1 #毫秒
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: HTML
+    cache: false
+    encoding: UTF-8

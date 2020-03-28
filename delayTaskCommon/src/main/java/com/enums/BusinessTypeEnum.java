@@ -9,11 +9,7 @@ public enum BusinessTypeEnum {
     /**
      * 开户
      */
-    opendAccount("openAccount"),
-    /**
-     * 推送风控
-     */
-    pushRisk("pushRisk");
+    opendAccount("openAccount");
 
 
     private String businessValue;

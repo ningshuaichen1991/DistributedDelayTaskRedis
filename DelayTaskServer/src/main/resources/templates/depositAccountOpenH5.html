@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <script>
+
+     function openAccountMonitor(){
+         alert("开户成功，正在异步通知结果，请关闭界面");
+         window.location.href="http://127.0.0.1:8080/test/notifyResultMonitor"
+     }
+
+     function openAccountLoopPull(){
+         alert("开户成功，正在异步通知结果，请关闭界面");
+         window.location.href="http://127.0.0.1:8080/test/notifyResultLoopPull"
+     }
+
+ </script>
+</head>
+<body>
+姓名：<input type="text"  ><br>
+身份证号：<input type="text"  ><br>
+手机号：<input type="text"  ><br>
+银行卡号：<input type="text"  ><br>
+<input type="button" value="确认开户(Monitor)" onclick="openAccountMonitor()"><br>
+<input type="button" value="确认开户(LoopPull)" onclick="openAccountLoopPull()">
+</body>
+</html>

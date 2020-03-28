@@ -3,9 +3,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Set;
 import	java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.LockSupport;
 
-import com.IAddDelayedTask;
+import com.IDelayedTask;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,10 +22,10 @@ import javax.annotation.Resource;
 public class TestDistributedDelayTaskRedis {
 
     @Resource
-    IAddDelayedTask addMonitorDelayedTask;
+    IDelayedTask addMonitorDelayedTask;
 
     @Resource
-    IAddDelayedTask addLoopPullDelayedTask;
+    IDelayedTask addLoopPullDelayedTask;
 
     @Resource
     StringRedisTemplate stringRedisTemplate;

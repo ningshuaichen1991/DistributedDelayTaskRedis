@@ -1,7 +1,7 @@
 package com.loopPull;
 import	java.time.LocalDateTime;
 
-import com.IAddDelayedTask;
+import com.IDelayedTask;
 import com.enums.BusinessTypeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.BoundZSetOperations;
@@ -18,7 +18,7 @@ import java.util.concurrent.locks.LockSupport;
  */
 @Component
 @Slf4j
-public class AddLoopPullDelayedTask implements IAddDelayedTask {
+public class LoopPullDelayedTaskService implements IDelayedTask {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
@@ -31,14 +31,20 @@ public class AddLoopPullDelayedTask implements IAddDelayedTask {
     public void addDelayedTask(String topic, String key, long times, TimeUnit timeUnit) {
         BoundZSetOperations<String,String> zset = stringRedisTemplate.boundZSetOps(topic);
         LocalDateTime now = LocalDateTime.now();
+        long time = 0L;
         if(timeUnit==TimeUnit.SECONDS){//秒
-            zset.add(key,now.plusSeconds(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
+            time = now.plusSeconds(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         }else if(timeUnit==TimeUnit.MINUTES){//分钟
-            zset.add(key,now.plusMinutes(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
+            time=now.plusMinutes(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         }else if(timeUnit==TimeUnit.HOURS){//小时
-            zset.add(key,now.plusHours(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
+            time=now.plusHours(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         }else if(timeUnit==TimeUnit.DAYS){//天
-            zset.add(key,now.plusDays(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
+            time=now.plusDays(times).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+        }
+        boolean status = zset.add(key,time);
+        log.info("topic：{} , key：{} 添加延时任务{}",topic,key,status?"成功":"失败");
+        if(!status){
+            return;
         }
         Thread t = loopPullDelayedTaskListener.getLoopPullDelayedTaskThread(BusinessTypeEnum.getByValue(topic));//获取当前的topic线程如果waiting的状态则唤醒
         if(t.getState()== Thread.State.WAITING){
@@ -47,10 +53,10 @@ public class AddLoopPullDelayedTask implements IAddDelayedTask {
         }
     }
 
-    public static void main(String[] args) {
-        LocalDateTime now = LocalDateTime.now();
-        long a = now.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-        System.out.println(a);
-        System.out.println((double) (a));
+    @Override
+    public void removeDelayedTask(String topic, String key) {
+        BoundZSetOperations<String,String> zset = stringRedisTemplate.boundZSetOps(topic);
+        long count=zset.remove(key);
+        log.info("topic：{} , key：{} 移除延时任务{}",topic,key,count>0?"成功":"失败");
     }
 }

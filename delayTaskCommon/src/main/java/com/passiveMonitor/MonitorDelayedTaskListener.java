@@ -1,10 +1,9 @@
 package com.passiveMonitor;
 
-import com.IAddDelayedTask;
-import com.common.ThreadPoolCommon;
+import com.IDelayedTask;
 import com.enums.BusinessTypeEnum;
-import com.gateWay.RedisDelayTaskGateWay;
-import com.taskListener.IDelayedTaskLisenter;
+import com.gateWay.DelayTaskBusinessGateWay;
+import com.taskBusiness.IDelayedTaskBusiness;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.listener.KeyExpirationEventMessageListener;
@@ -12,8 +11,8 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 /**
@@ -24,10 +23,12 @@ import java.util.concurrent.TimeUnit;
 public class MonitorDelayedTaskListener extends KeyExpirationEventMessageListener {
 
     @Resource
-    private RedisDelayTaskGateWay redisDelayTaskGateWay;
+    private DelayTaskBusinessGateWay delayTaskBusinessGateWay;
 
     @Resource
-    private IAddDelayedTask addMonitorDelayedTask;
+    private IDelayedTask monitorDelayedTaskService;
+
+    private static ExecutorService executors = Executors.newCachedThreadPool();//执行延时任务逻辑的线程池
 
 
     public MonitorDelayedTaskListener(RedisMessageListenerContainer listenerContainer) {
@@ -50,8 +51,7 @@ public class MonitorDelayedTaskListener extends KeyExpirationEventMessageListene
         if(!BusinessTypeEnum.getAllBusinessTypeStringList().contains(keyArray[0])){
             return;
         }
-        IDelayedTaskLisenter lisenter =  redisDelayTaskGateWay.getDelayedTaskLisenter(keyArray[0]);
-        ThreadPoolExecutor executor =  ThreadPoolCommon.getThreadPoolExecutor();
-        executor.execute(()->lisenter.execute(keyArray[0],keyArray[1],addMonitorDelayedTask));
+        IDelayedTaskBusiness lisenter =  delayTaskBusinessGateWay.getDelayedTaskLisenter(keyArray[0]);
+        executors.execute(()->lisenter.execute(keyArray[0],keyArray[1],monitorDelayedTaskService));
     }
 }

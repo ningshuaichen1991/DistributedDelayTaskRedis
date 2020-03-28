@@ -2,11 +2,10 @@ package com.loopPull;
 import java.util.concurrent.*;
 import	java.util.concurrent.locks.LockSupport;
 
-import com.IAddDelayedTask;
-import com.common.ThreadPoolCommon;
+import com.IDelayedTask;
 import com.enums.BusinessTypeEnum;
-import com.gateWay.RedisDelayTaskGateWay;
-import com.taskListener.IDelayedTaskLisenter;
+import com.gateWay.DelayTaskBusinessGateWay;
+import com.taskBusiness.IDelayedTaskBusiness;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.BoundZSetOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -30,10 +29,12 @@ public class LoopPullDelayedTaskListener {
     private StringRedisTemplate stringRedisTemplate;
 
     @Resource
-    private RedisDelayTaskGateWay redisDelayTaskGateWay;
+    private DelayTaskBusinessGateWay delayTaskGateWay;
 
     @Resource
-    private IAddDelayedTask addLoopPullDelayedTask;
+    private IDelayedTask loopPullDelayedTaskService;
+
+    private static ExecutorService executors = Executors.newCachedThreadPool();
 
     private static Map<BusinessTypeEnum,Thread> redisDelayTaskThreadMap = new ConcurrentHashMap<>();
 
@@ -92,27 +93,11 @@ public class LoopPullDelayedTaskListener {
                 long times = (localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
                 if(times>=score){
                     log.info("已从zSet中取出，开始是执行topic："+businessTypeEnum.getBusinessValue()+"，value："+value);
-                    IDelayedTaskLisenter lisenter =  redisDelayTaskGateWay.getDelayedTaskLisenter(businessTypeEnum.getBusinessValue());
-                    ThreadPoolExecutor executor =  ThreadPoolCommon.getThreadPoolExecutor();//线程池
-                    executor.execute(()->lisenter.execute(businessTypeEnum.getBusinessValue(),value,addLoopPullDelayedTask));//异步执行任务防止堵塞主线程
+                    IDelayedTaskBusiness lisenter =  delayTaskGateWay.getDelayedTaskLisenter(businessTypeEnum.getBusinessValue());
+                    executors.execute(()->lisenter.execute(businessTypeEnum.getBusinessValue(),value,loopPullDelayedTaskService));//异步执行任务防止堵塞主线程
                     boundZSetOperations.remove(value);
                 }
             }
         }
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-
-        Thread t = new Thread(()->{
-            LockSupport.park();
-            System.out.println(123);
-        });
-        t.start();
-        Thread.sleep(200);
-        System.out.println(t.getState());
-        LockSupport.unpark(t);
-        Thread.sleep(200);
-        System.out.println(t.getState());
-        t.start();
     }
 }
