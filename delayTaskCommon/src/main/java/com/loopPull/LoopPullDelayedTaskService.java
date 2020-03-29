@@ -6,7 +6,7 @@ import com.enums.BusinessTypeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.BoundZSetOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.ZoneId;
@@ -16,7 +16,7 @@ import java.util.concurrent.locks.LockSupport;
 /**
  * 添加循环拉取的任务数据
  */
-@Component
+@Service("loopPullDelayedTaskService")
 @Slf4j
 public class LoopPullDelayedTaskService implements IDelayedTask {
 

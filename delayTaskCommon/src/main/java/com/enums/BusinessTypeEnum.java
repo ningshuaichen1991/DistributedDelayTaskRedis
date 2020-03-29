@@ -4,6 +4,9 @@ import	java.util.stream.Collectors;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 业务类型
+ */
 public enum BusinessTypeEnum {
 
     /**
@@ -22,6 +25,10 @@ public enum BusinessTypeEnum {
         return businessValue;
     }
 
+    /**
+     * 获取所有的枚举值
+     * @return
+     */
     public static List<String> getAllBusinessTypeStringList(){
         return Arrays.stream(BusinessTypeEnum.values()).
                 map(x -> x.getBusinessValue()).collect(Collectors.toList());
@@ -36,6 +43,10 @@ public enum BusinessTypeEnum {
         return Arrays.stream(BusinessTypeEnum.values()).filter(v->v.getBusinessValue().equals(value)).findFirst().get();
     }
 
+    /**
+     * 获取所有的枚举对象
+     * @return
+     */
     public static List<BusinessTypeEnum> getAllBusinessTypeList(){
         return Arrays.stream(BusinessTypeEnum.values()).collect(Collectors.toList());
     }

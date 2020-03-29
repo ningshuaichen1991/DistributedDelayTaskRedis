@@ -21,34 +21,22 @@ public class TestController {
     @Resource
     private LoopPullDelayedTaskListener loopPullDelayedTaskListener;
 
-    @Resource
-    private IDelayedTask addMonitorDelayedTask;
+    @Resource(name="loopPullDelayedTaskService")
+    private IDelayedTask loopPullDelayedTaskService;
 
-    @Resource
-    private IDelayedTask addLoopPullDelayedTask;
+    @Resource(name="monitorDelayedTaskService")
+    private IDelayedTask monitorDelayedTaskService;
 
-
-    @RequestMapping("/start")
-    @ResponseBody
-    public String starting(){
-        Thread t = loopPullDelayedTaskListener.getLoopPullDelayedTaskThread(BusinessTypeEnum.opendAccount);
-        if(t.getState()== Thread.State.WAITING){
-            LockSupport.unpark(t);
-            return "已成功唤醒";
-        }else{
-            return "正在运行着了";
-        }
-    }
 
     /**
      * 添加被动监听的任务
      * @param topic
      * @return
      */
-    @RequestMapping("/addMonitorDelayedTask")
+    @RequestMapping("/monitorDelayedTask")
     @ResponseBody
-    public String addMonitorDelayedTask(String topic){
-        addMonitorDelayedTask.addDelayedTask(topic,"1",10,TimeUnit.SECONDS);
+    public String monitorDelayedTask(String topic){
+        monitorDelayedTaskService.addDelayedTask(topic,"1",10,TimeUnit.SECONDS);
         return "success";
     }
 
@@ -64,14 +52,24 @@ public class TestController {
     }
 
     /**
+     * 添加被动执行延时任务
+     * @return
+     */
+    @RequestMapping("/addMonitorDelayedTask")
+    @ResponseBody
+    public String addMonitorDelayedTask(){
+        monitorDelayedTaskService.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"12345",10,TimeUnit.SECONDS);
+        return "success";
+    }
+
+    /**
      * 添加主动拉取循环的任务
-     * @param topic
      * @return
      */
     @RequestMapping("/addLoopPullDelayedTask")
     @ResponseBody
-    public String addLoopPullDelayedTask(String topic){
-        addLoopPullDelayedTask.addDelayedTask(topic,"1",10,TimeUnit.SECONDS);
+    public String addLoopPullDelayedTask(){
+        loopPullDelayedTaskService.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"12345",10,TimeUnit.SECONDS);
         return "success";
     }
 
@@ -83,34 +81,34 @@ public class TestController {
     @RequestMapping("/toJumpOpenAccountH5")
     public String toJumpOpenAccountH5(String type){
         if(type.equals("monitor")){//被动监听任务添加
-            addMonitorDelayedTask.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"1",300,TimeUnit.SECONDS);
+            monitorDelayedTaskService.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"12345",20,TimeUnit.SECONDS);
         }else{//主动拉取任务添加
-            addLoopPullDelayedTask.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"1",300,TimeUnit.SECONDS);
+            loopPullDelayedTaskService.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"12345",20,TimeUnit.SECONDS);
         }
         log.info("H5存管开户跳转………………");
         return "depositAccountOpenH5";
     }
 
     /**
-     * 开户结果回调通知接口
+     * 被动监听回调通知接口
      * @return
      */
     @RequestMapping("/notifyResultMonitor")
     @ResponseBody
     public String notifyResult(){
-        addMonitorDelayedTask.removeDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"1");
+        monitorDelayedTaskService.removeDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"1");
         log.info("开户结果通知成功……");
         return "success";
     }
 
     /**
-     * 开户结果回调通知接口
+     * 主动拉取通知接口
      * @return
      */
     @RequestMapping("/notifyResultLoopPull")
     @ResponseBody
     public String notifyResultLoopPull(){
-        addLoopPullDelayedTask.removeDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"1");
+        loopPullDelayedTaskService.removeDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"1");
         log.info("开户结果通知成功……");
         return "success";
     }

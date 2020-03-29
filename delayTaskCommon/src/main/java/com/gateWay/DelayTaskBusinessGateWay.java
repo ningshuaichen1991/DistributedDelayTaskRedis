@@ -16,11 +16,11 @@ import java.util.List;
 public class DelayTaskBusinessGateWay {
 
     @Autowired
-    private List<IDelayedTaskBusiness> delayedTaskLisenterList;
+    private List<IDelayedTaskBusiness> delayedTaskBusinessList;
 
 
-    public IDelayedTaskBusiness getDelayedTaskLisenter(String topic){
-        for(IDelayedTaskBusiness service : delayedTaskLisenterList){
+    public IDelayedTaskBusiness route(String topic){
+        for(IDelayedTaskBusiness service : delayedTaskBusinessList){
             DelayTaskType delayTaskType = service.getClass().getAnnotation(DelayTaskType.class);
             if(delayTaskType.topic().getBusinessValue().equals(topic)){
                 log.info("已导航到具体的延时任务业务类，{}",service.getClass().getSimpleName());

@@ -1,17 +1,14 @@
 package com.distributedDelayTaskRedis;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.Set;
+import	java.util.Scanner;
+import java.util.Scanner;
 import	java.util.concurrent.TimeUnit;
 
 import com.IDelayedTask;
+import com.enums.BusinessTypeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.BoundZSetOperations;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
@@ -22,41 +19,30 @@ import javax.annotation.Resource;
 public class TestDistributedDelayTaskRedis {
 
     @Resource
-    IDelayedTask addMonitorDelayedTask;
+    IDelayedTask monitorDelayedTaskService;
 
     @Resource
-    IDelayedTask addLoopPullDelayedTask;
+    IDelayedTask loopPullDelayedTaskService;
 
-    @Resource
-    StringRedisTemplate stringRedisTemplate;
 
     @Test
     public void addMonitorDelayedTaskTest() throws Exception{
-        addMonitorDelayedTask.addDelayedTask("openAccount","1234",10,TimeUnit.SECONDS);
-        Thread.sleep(200000);
+        monitorDelayedTaskService.addDelayedTask("openAccount","1234",10,TimeUnit.SECONDS);
+        Thread.sleep(60000);
     }
 
 
     @Test
     public void addLoopPullDelayedTask() throws Exception{
-        addLoopPullDelayedTask.addDelayedTask("openAccount","12345",20,TimeUnit.SECONDS);
-        //Thread.sleep(200000);
+        loopPullDelayedTaskService.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"12345",10,TimeUnit.SECONDS);
+        Scanner sc = new Scanner(System.in);
+        if(sc.hasNext()){
+            String s = sc.next();
+            if(s.equals("start")){
+                loopPullDelayedTaskService.addDelayedTask(BusinessTypeEnum.opendAccount.getBusinessValue(),"12345",10,TimeUnit.SECONDS);
+            }
+        }
+        Thread.sleep(200000);
     }
 
-//1.585219869E9
-    @Test
-    public void removeZSet(){
-        //addLoopPullDelayedTask.addDelayedTask("openAccount","1234",20,TimeUnit.SECONDS);
-        BoundZSetOperations boundZSetOperations = stringRedisTemplate.boundZSetOps("openAccount");
-        Set<ZSetOperations.TypedTuple> scoreSets =  boundZSetOperations.rangeWithScores(0,0);
-        ZSetOperations.TypedTuple tuple = (ZSetOperations.TypedTuple) scoreSets.toArray()[0];
-        double score = tuple.getScore();
-        String value = (String)tuple.getValue();
-        LocalDateTime localDateTime = LocalDateTime.now();
-        long times = (localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
-        if(times>=score){
-            System.out.println("score："+score+"，value："+value);
-            boundZSetOperations.remove(value);
-        }
-    }
 }

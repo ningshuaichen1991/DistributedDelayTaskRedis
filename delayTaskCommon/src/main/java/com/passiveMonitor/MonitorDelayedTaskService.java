@@ -3,7 +3,7 @@ package com.passiveMonitor;
 import com.IDelayedTask;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 添加被动监听的延时任务
  */
-@Component
+@Service("monitorDelayedTaskService")
 @Slf4j
 public class MonitorDelayedTaskService implements IDelayedTask {
 
